@@ -292,6 +292,11 @@
       }
     </script>
 
+    {% if shop.metafields.qimify_minicart.script_src %}
+        <script type="text/javascript" src="{{ shop.metafields.qimify_minicart.script_src }}&shop={{shop.permanent_domain }}" async="async"></script>
+    {% endif %}
+
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
